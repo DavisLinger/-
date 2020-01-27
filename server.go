@@ -22,7 +22,7 @@ func dailyBeautifulSentence(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Access-Control-Allow-Origin", "*")             //允许访问所有域
 	w.Header().Add("Access-Control-Allow-Headers", "Content-Type") //header的类型
 	w.Header().Set("content-type", "application/text")             //返回数据格式是text
-	n := rand.Int() % 150
+	n := rand.Intn(150) + 1
 	log.Println("request path : ", r.URL.Path)
 	log.Println("local n is : ", n)
 	db, err := sql.Open("mysql", "root:linglinger@tcp(127.0.0.1:3306)/goweb?charset=utf8")
