@@ -6,34 +6,17 @@
     <title>一天一口毒鸡汤</title>
     <script src="//libs.baidu.com/jquery/1.10.2/jquery.min.js"></script>
     <script type="text/javascript" src="scripts/CFS.Snow.min.js"></script>
-    <style type="text/css">
-        p {
-            font-size: 28px;
-            color: rgba(32, 134, 182, 0.904);
-            text-align: center;
-            vertical-align: middle;
-            text-indent: 3em;
-            position: relative;
-            top: 370px;
-            text-shadow: -1px -1px 10px rgb(187, 202, 197);
-
-        }
-
-        html {
-            background-image: url('images/space.jpeg');
-            background-repeat: no-repeat;
-            background-size: cover;
-        }
-
-        p.sansserif {
-            font-family: sans-serif
-        }
-    </style>
+    <link href="styles/words.css" type="text/css" rel="stylesheet">
     <script type="text/javascript">
         window.onload = function () {
             snow.down();
             $('#time').load("http://localhost:23333")
         };
+        $(document).ready(function () {
+            $("p").click(function () {
+                $('#time').load("http://localhost:23333")
+            });
+        });
     </script>
 </head>
 

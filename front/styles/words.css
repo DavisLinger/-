@@ -1,3 +1,21 @@
-p{
-    font-size: xx-large;
+p {
+    font-size: 28px;
+    color: rgba(32, 134, 182, 0.904);
+    text-align: center;
+    vertical-align: middle;
+    text-indent: 3em;
+    position: relative;
+    top: 370px;
+    text-shadow: -1px -1px 10px rgb(187, 202, 197);
+
+}
+
+html {
+    background-image: url('/images/space.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+p.sansserif {
+    font-family: sans-serif
 }

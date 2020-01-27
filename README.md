@@ -1,7 +1,7 @@
 # 一天一口毒鸡汤
 毒鸡汤不考虑来一口？
 ## 怎么运行？
-###前置条件
+### 前置条件
 * 安装node
 * 安装go
 * 安装node的http-server`npm install http-server -g`
