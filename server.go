@@ -2,6 +2,7 @@ package main
 
 import (
 	"database/sql"
+	"github.com/gin-gonic/gin"
 	_ "github.com/go-sql-driver/mysql"
 	"io"
 	"log"
@@ -11,11 +12,12 @@ import (
 
 func main() {
 	// Route
-	http.HandleFunc("/", dailyBeautifulSentence)
-	err := http.ListenAndServe(":23333", nil)
-	if err != nil {
-		log.Println(err)
-	}
+	r:=gin.Default()
+	r.GET("/",func(c *gin.Context){
+		c.Status(200)
+		c.Writer.Write([]byte(`<h1>OK</h1>`))
+	})
+	r.Run(":10911")
 }
 
 func dailyBeautifulSentence(w http.ResponseWriter, r *http.Request) {
